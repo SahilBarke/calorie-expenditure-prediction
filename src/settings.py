@@ -1,8 +1,15 @@
 # settings.py
 from typing import List
+from pathlib import Path
 
-DATA_DIR = "../data"
-RAW_DATA_FILE = f"{DATA_DIR}/Calorie_expenditure.csv"
+# Path to project root
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+DATA_DIR = PROJECT_ROOT / "data"
+RAW_DATA_FILE = DATA_DIR / "Calorie_expenditure.csv"
+
+MODELS_DIR = PROJECT_ROOT / "models"
+MODEL_FILE = MODELS_DIR / "calorie_expenditure_model.pkl"
 
 def get_feature_columns() -> List[str]:
     """Return the list of feature column names used for modeling."""
@@ -24,5 +31,3 @@ def get_target_column() -> str:
 RANDOM_SEED = 42
 
 TEST_SIZE = 0.2  # Proportion of data to be used for testing
-
-VALIDATION_SIZE = 0.25  # Proportion of training data to be used for validation
