@@ -28,6 +28,6 @@ def get_target_column() -> str:
     """Return the name of the target column."""
     return "Calories"
 
-RANDOM_SEED = 42
+RANDOM_SEED = 42  # Seed for reproducibility
 
 TEST_SIZE = 0.2  # Proportion of data to be used for testing

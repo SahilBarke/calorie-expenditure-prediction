@@ -111,6 +111,6 @@ def train_model(
 def save_model(model: Pipeline, file_path: str) -> None:
     """Save the trained model to a file."""
     file_path = Path(file_path)
-    file_path.parent.mkdir(parents=True, exist_ok=True)  
+    file_path.parent.mkdir(parents=True, exist_ok=True)  # Ensure directory exists
     joblib.dump(model, file_path)
     print(f"Model saved to {file_path}")
