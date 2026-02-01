@@ -84,6 +84,7 @@ def train_model(
     # --------------------------
     # Cross-validation on TRAIN
     # --------------------------
+    print("Performing cross-validation...")
     cv_scores = cross_val_score(
         model,
         X_train,
