@@ -106,7 +106,7 @@ def train_model(
     #---------------------------    
     # save_model(model, MODEL_FILE)
     
-    return model, X_test, y_test
+    return model, X_train, X_test, y_test
 
 
 def save_model(model: Pipeline, file_path: str) -> None:

@@ -11,6 +11,9 @@ RAW_DATA_FILE = DATA_DIR / "Calorie_expenditure.csv"
 MODELS_DIR = PROJECT_ROOT / "models"
 MODEL_FILE = MODELS_DIR / "calorie_expenditure_model.pkl"
 
+REPORTS_DIR = PROJECT_ROOT / "reports"
+REPORTS_FIGS_DIR = REPORTS_DIR / "figures"
+
 def get_feature_columns() -> List[str]:
     """Return the list of feature column names used for modeling."""
     return [
